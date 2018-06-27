@@ -4,7 +4,8 @@
   "description": "Another stupid IRC client, but it's like an Electron app or something",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "author": "GlitchMasta47",
   "license": "CC-BY-NC-SA-4.0",
