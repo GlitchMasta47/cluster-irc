@@ -1,7 +1,6 @@
 let electron = require('electron');
-let app,win;
-
-app = electron.app;
+let app = electron.app;
+let win = null;
 
 function createWindow () {
     // Create the browser window.
