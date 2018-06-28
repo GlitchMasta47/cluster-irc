@@ -22,10 +22,10 @@
 
             document.onload += function() {
                 // Contact the main process to check for updates
-
+                ipc.send("update","check-for-updates")
             }
 
-            ipc.on('asynchronous-message', function (event, arg) {
+            ipc.on('status', function (event, arg) {
                 status(arg)
             })
         </script>
