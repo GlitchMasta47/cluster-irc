@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cluster IRC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <h1>Loading</h1>
-</body>
-</html>>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cluster</title>
+    </head>
+    <body style="font-family:'Source Sans Pro',sans-serif;text-align:center;background-color:#2f2f2f;color:#ffffff;user-select:none;cursor:default;" onselectstart="return false;" unselectable="on" onmousedown="return false;" oncontextmenu="return false;">
+        <div style="position:absolute;top:50%;left:50%;transform: translateX(-50%) translateY(-50%);">
+            <div style="background:linear-gradient(to bottom right,#4527a0,#ad1457);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:72px;">Cluster</div>
+            <br>
+            <img src="load.svg" width="100"></img>
+            <br><br>
+            <span id="loadingStatus">Just a second...</span>
+        </div>
+        <script type="text/javascript">
+            let ipc = require('electron').ipcRenderer
+
+            function status(text) {
+                document.getElementById("loadingStatus").innerText = (text || "This is awkward...")
+            }
+
+            document.onload += function() {
+                // Contact the main process to check for updates
+
+            }
+
+            ipc.on('asynchronous-message', function (event, arg) {
+                status(arg)
+            })
+        </script>
+    </body>
+</html>
