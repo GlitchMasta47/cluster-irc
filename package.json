@@ -10,6 +10,6 @@
   "author": "GlitchMasta47",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
-    "electron": "^2.0.3"
+    "electron": "^2.0.8"
   }
 }
